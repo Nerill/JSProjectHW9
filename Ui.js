@@ -47,7 +47,6 @@ export class Ui {
           row.appendChild(td2);
           row.appendChild(td3);
           tblbody.appendChild(row);
-          console.log(row);
         })
         tableBody.appendChild(tblbody);
         tableBody.style.display = 'table';

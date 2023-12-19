@@ -18,11 +18,17 @@ import {Ui} from './Ui.js';
                 github.getUser(userName)
                     .then((data) => {
                         ui.showProfile(data);
-                    })  
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
                 github.getLastRepos(userName)
                     .then((data) => {
                         ui.showRepos(data.slice(0, 5));
                     })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
             }
         }
 
